@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="resultStyle.css">
     <script src="resultScript.js" defer></script>
     <title>Result: Stone, Paper & Scissor</title>
@@ -29,6 +34,11 @@
         <!-- result -->
         <div id="result-box">
             <div id="your-pick" style="border-color: #0074B6;"><img src="./images/stone.png" alt=""></div>
+            <div id="result-Text">
+                <p>YOU LOST</p>
+                <p>AGAINST PC</p>
+                <button id="play-again">PLAY AGAIN</button>
+            </div>
             <div id="pc-pick" style="border-color: #BD00FF;"><img src="./images/scissor.png" alt=""></div>
         </div>
     </main>

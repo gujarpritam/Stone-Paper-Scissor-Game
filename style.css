@@ -91,6 +91,11 @@ main {
     width: 25%;
 }
 
+.stone-scissor-paper:hover {
+    cursor: pointer;
+    scale: 1.02;
+}
+
 img {
     background: none;
 }
