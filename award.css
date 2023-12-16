@@ -1,0 +1,146 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    background: #8CC461;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+}
+
+main div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    height: 95%;
+    width: 95%;
+    margin: auto;
+}
+
+#award {
+    position: absolute;
+    top: 168px;
+    left: 687px;
+}
+
+#hurray {
+    color: white;
+    font-size: 70px;
+    font-weight: 500;
+    margin: 35px 0px 0px 32px;
+    letter-spacing: 0.1em;
+}
+
+#won {
+    color: white;
+    font-size: 31px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    margin-left: 25px;
+}
+
+/* -----play again----- */
+#play-again {
+    width: 9%;
+    height: 5%;
+    margin: 50px 0px 0px 33px;
+    color: #6B6B6B;
+    font-size: 0.8em;
+    font-weight: 500;
+    border-radius: 8px;
+    border: none;
+    background: white;
+}
+
+button:hover {
+    cursor: pointer;
+    scale: 1.02;
+}
+
+/* ----------rules button-------------- */
+#rules-button {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.05px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 28px;
+    right: 40px;
+    height: 35px;
+    width: 100px;
+    cursor: pointer;
+}
+
+#game-rules {
+    color: white;
+    border: 5px solid white;
+    background: #004429;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 11%;
+    right: 4%;
+    height: 50%;
+    width: 21%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* button */
+#game-rules #close-rules {
+    border: 4px solid white;
+    border-radius: 50%;
+    width: 17%;
+    height: 15%;
+    position: absolute;
+    top: -6%;
+    right: -6%;
+    background: #FF0000;
+    cursor: pointer;
+}
+
+#game-rules h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    background: #004429;
+    margin: 4% 0% 2% 0%;
+}
+
+#game-rules ul,
+#game-rules li {
+    background: #004429;
+
+}
+
+#game-rules ul {
+    width: 80%;
+    height: 80%;
+    list-style-type: square;
+}
+
+#game-rules li {
+    color: yellow;
+    margin: 3%;
+}
+
+#game-rules span {
+    color: white;
+    background: #004429;
+}
+
+#rules-button:hover,
+#close-rules:hover {
+    scale: 1.02;
+}
+
+img {
+    background: none;
+}

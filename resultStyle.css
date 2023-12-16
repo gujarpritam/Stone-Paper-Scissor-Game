@@ -27,7 +27,8 @@ main {
 #label {
     height: 100%;
     width: 40%;
-    border: 1px solid black;
+    border-radius: 10px;
+    /* border: 1px solid black; */
 }
 
 #label ul {
@@ -39,6 +40,9 @@ main {
     letter-spacing: 0.05em;
     text-align: left;
     color: #FFFFFF;
+    /* border: 3px solid white; */
+    border-radius: 10px;
+    margin-left: 15px;
 }
 
 #score {
@@ -47,7 +51,8 @@ main {
     align-items: center;
     width: 40%;
     height: 100%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    border-radius: 10px;
 }
 
 #score #computer-score,
@@ -56,11 +61,39 @@ main {
     width: 45%;
     background: white;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#computer-score p,
+#your-score p,
+#computer-score div,
+#your-score div {
+    background: white;
+}
+
+#computer-score p,
+#your-score p {
+    color: #656565;
+    font-weight: 500;
+}
+
+#computer-score p:nth-child(1),
+#your-score p:nth-child(1) {
+    margin-top: 10px;
+}
+
+#computer-score div,
+#your-score div {
+    font-size: 55px;
+    font-weight: 900;
+    margin-top: 3px;
 }
 
 /* result-box */
 #result-box {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 50%;
     height: 50%;
     display: flex;
@@ -73,16 +106,16 @@ main {
 #your-pick::before {
     content: "YOU PICKED";
     position: absolute;
-    bottom: 292px;
-    left: 80px;
+    bottom: 199px;
+    left: 32px;
     color: white;
 }
 
 #pc-pick::before {
     content: "PC PICKED";
     position: absolute;
-    bottom: 292px;
-    right: 80px;
+    bottom: 199px;
+    right: 32px;
     color: white;
 }
 
@@ -97,6 +130,8 @@ main {
     height: 43%;
     width: 29%;
     margin: 0% 4%;
+    z-index: 1;
+    position: relative;
 }
 
 img {
@@ -145,4 +180,145 @@ img {
 button:hover {
     cursor: pointer;
     scale: 1.02;
+}
+
+.circle-left {
+    display: none;
+    background-color: #375720;
+    height: 52%;
+    width: 24%;
+    border-radius: 50%;
+    position: absolute;
+    top: 83px;
+    left: 31px;
+    animation: pulseOut 2s infinite cubic-bezier(0.36, 0.11, .89, .32);
+}
+
+.circle-right {
+    display: flex;
+    background-color: #375720;
+    height: 52%;
+    width: 24%;
+    border-radius: 50%;
+    position: absolute;
+    top: 83px;
+    right: 31px;
+    animation: pulseOut 2s infinite cubic-bezier(0.36, 0.11, .89, .32);
+
+}
+
+@keyframes pulseOut {
+    from {
+        transform: scale(0.5, 0.5);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: scale(2.5, 2.5);
+        opacity: 0;
+    }
+}
+
+/* -------RULES-------- */
+#rulesAndNextButton {
+    height: 74px;
+    width: 255px;
+    position: absolute;
+    bottom: 15px;
+    right: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#rules-button {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.05px;
+    border-radius: 10px;
+    margin-right: 19px;
+    height: 35px;
+    width: 100px;
+    cursor: pointer;
+}
+
+#game-rules {
+    color: white;
+    border: 5px solid white;
+    background: #004429;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 11%;
+    right: 4%;
+    height: 50%;
+    width: 21%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* button */
+#game-rules #close-rules {
+    border: 4px solid white;
+    border-radius: 50%;
+    width: 17%;
+    height: 15%;
+    position: absolute;
+    top: -6%;
+    right: -6%;
+    background: #FF0000;
+    cursor: pointer;
+}
+
+#game-rules h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    background: #004429;
+    margin: 4% 0% 2% 0%;
+}
+
+#game-rules ul,
+#game-rules li {
+    background: #004429;
+
+}
+
+#game-rules ul {
+    width: 80%;
+    height: 80%;
+    list-style-type: square;
+}
+
+#game-rules li {
+    color: yellow;
+    margin: 3%;
+}
+
+#game-rules span {
+    color: white;
+    background: #004429;
+}
+
+#rules-button:hover,
+#close-rules:hover {
+    scale: 1.02;
+}
+
+/* ------------next button------------ */
+#next-button {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.05px;
+    border-radius: 10px;
+    height: 35px;
+    width: 100px;
+    cursor: pointer;
+    display: none;
 }

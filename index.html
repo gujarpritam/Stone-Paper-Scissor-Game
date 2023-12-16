@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stone, Paper & Scissor Game</title>
+    <title>Rock, Paper & Scissors Game</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,12 +20,20 @@
                 <ul>
                     <li>ROCK</li>
                     <li>PAPER</li>
-                    <li>SCISSOR</li>
+                    <li>SCISSORS</li>
                 </ul>
             </div>
             <div id="score">
-                <div id="computer-score">COMPUTER SCORE</div>
-                <div id="your-score">YOUR SCORE</div>
+                <div id="computer-score">
+                    <p>COMPUTER</p>
+                    <p>SCORE</p>
+                    <div>0</div>
+                </div>
+                <div id="your-score">
+                    <p>YOUR</p>
+                    <p>SCORE</p>
+                    <div>0</div>
+                </div>
             </div>
         </div>
         <div id="play">
@@ -41,6 +49,8 @@
                         alt=""></div>
             </div>
         </div>
+
+        <!---------- rules ---------->
         <button onclick="rules()" id="rules-button">RULES</button>
         <div id="game-rules">
             <button onclick="closeRules()" id="close-rules"><img src="./images/X.png" alt=""></button>

@@ -19,3 +19,11 @@ input.forEach(element => {
         window.location.href = 'resultIndex.html';
     }
 });
+
+if (localStorage.hasOwnProperty('yourScore')) {
+    document.querySelector('#your-score div').innerHTML = JSON.parse(localStorage.getItem('yourScore'));
+}
+
+if (localStorage.hasOwnProperty('computerScore')) {
+    document.querySelector('#computer-score div').innerHTML = JSON.parse(localStorage.getItem('computerScore'));
+}

@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="resultStyle.css">
     <script src="resultScript.js" defer></script>
-    <title>Result: Stone, Paper & Scissor</title>
+    <title>Result: Rock, Paper & Scissors</title>
 </head>
 
 <body>
@@ -22,25 +22,72 @@
                 <ul>
                     <li>ROCK</li>
                     <li>PAPER</li>
-                    <li>SCISSOR</li>
+                    <li>SCISSORS</li>
                 </ul>
             </div>
             <div id="score">
-                <div id="computer-score">COMPUTER SCORE</div>
-                <div id="your-score">YOUR SCORE</div>
+                <div id="computer-score">
+                    <p>COMPUTER</p>
+                    <p>SCORE</p>
+                    <div>0</div>
+                </div>
+                <div id="your-score">
+                    <p>YOUR</p>
+                    <p>SCORE</p>
+                    <div>0</div>
+                </div>
             </div>
         </div>
 
         <!-- result -->
         <div id="result-box">
             <div id="your-pick" style="border-color: #0074B6;"><img src="./images/stone.png" alt=""></div>
+            <div class="circle-left" style="animation-delay: 0s;"></div>
+            <div class="circle-left" style="animation-delay: 0.2s;"></div>
+            <div class="circle-left" style="animation-delay: 0.5s;"></div>
+            <div class="circle-left" style="animation-delay: 0.8s;"></div>
+            <div class="circle-left" style="animation-delay: 1.1s;"></div>
+            <div class="circle-left" style="animation-delay: 1.4s;"></div>
+            <div class="circle-left" style="animation-delay: 1.7s;"></div>
+            <div class="circle-left" style="animation-delay: 2s;"></div>
+
             <div id="result-Text">
                 <p>YOU LOST</p>
                 <p>AGAINST PC</p>
                 <button id="play-again">PLAY AGAIN</button>
             </div>
+
             <div id="pc-pick" style="border-color: #BD00FF;"><img src="./images/scissor.png" alt=""></div>
+            <div class="circle-right" style="animation-delay: 0s;"></div>
+            <div class="circle-right" style="animation-delay: 0.2s;"></div>
+            <div class="circle-right" style="animation-delay: 0.5s;"></div>
+            <div class="circle-right" style="animation-delay: 0.8s;"></div>
+            <div class="circle-right" style="animation-delay: 1.1s;"></div>
+            <div class="circle-right" style="animation-delay: 1.4s;"></div>
+            <div class="circle-right" style="animation-delay: 1.7s;"></div>
+            <div class="circle-right" style="animation-delay: 2s;"></div>
+
         </div>
+
+        <!---------- rules & next button ---------->
+        <div id="rulesAndNextButton">
+            <button onclick="rules()" id="rules-button">RULES</button>
+            <button onclick="next()" id="next-button">NEXT</button>
+        </div>
+
+        <div id="game-rules">
+            <button onclick="closeRules()" id="close-rules"><img src="./images/X.png" alt=""></button>
+            <h3>Game Rules</h3>
+            <ul>
+                <li><span>Rock beats scissors, scissors beat paper, and paper beats rock.</span></li>
+                <li><span>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock,
+                        paper, scissors.”</span></li>
+                <li><span>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</span>
+                </li>
+                <li><span>If both players lay down the same hand, each player lays down another hand</span></li>
+            </ul>
+        </div>
+
     </main>
 </body>
 

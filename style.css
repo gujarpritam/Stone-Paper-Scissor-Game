@@ -27,7 +27,8 @@ main {
 #label {
     height: 100%;
     width: 40%;
-    border: 1px solid black;
+    /* border: 3px solid white; */
+    border-radius: 10px;
 }
 
 #label ul {
@@ -39,6 +40,10 @@ main {
     letter-spacing: 0.05em;
     text-align: left;
     color: #FFFFFF;
+    /* border: 3px solid white; */
+    border-radius: 10px;
+    margin-left: 15px;
+
 }
 
 #score {
@@ -47,7 +52,8 @@ main {
     align-items: center;
     width: 40%;
     height: 100%;
-    border: 1px solid black;
+    /* border: 3px solid white; */
+    border-radius: 10px;
 }
 
 #score #computer-score,
@@ -56,6 +62,34 @@ main {
     width: 45%;
     background: white;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#computer-score p,
+#your-score p,
+#computer-score div,
+#your-score div {
+    background: white;
+}
+
+#computer-score p,
+#your-score p {
+    color: #656565;
+    font-weight: 500;
+}
+
+#computer-score p:nth-child(1),
+#your-score p:nth-child(1) {
+    margin-top: 10px;
+}
+
+#computer-score div,
+#your-score div {
+    font-size: 55px;
+    font-weight: 900;
+    margin-top: 3px;
 }
 
 /* play-section */
@@ -126,7 +160,7 @@ img {
     bottom: 11%;
     right: 4%;
     height: 50%;
-    width: 24%;
+    width: 21%;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -137,7 +171,7 @@ img {
 #game-rules #close-rules {
     border: 4px solid white;
     border-radius: 50%;
-    width: 14%;
+    width: 17%;
     height: 15%;
     position: absolute;
     top: -6%;
