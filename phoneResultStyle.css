@@ -170,7 +170,7 @@ img {
 }
 
 #result-Text button {
-    width: 70%;
+    width: 80%;
     height: 25%;
     color: #6B6B6B;
     font-size: 0.8em;
@@ -187,12 +187,12 @@ button:hover {
 
 .circle-left {
     background-color: #375720;
-    height: 29%;
-    width: 24%;
+    height: 22%;
+    width: 22%;
     border-radius: 50%;
     position: absolute;
-    top: 157px;
-    left: 26px;
+    top: 39%;
+    left: 8%;
     display: none;
     animation: pulseOut 2s infinite cubic-bezier(0.36, 0.11, .89, .32);
 }
@@ -200,12 +200,12 @@ button:hover {
 .circle-right {
     display: flex;
     background-color: #375720;
-    height: 29%;
-    width: 24%;
+    height: 22%;
+    width: 22%;
     border-radius: 50%;
     position: absolute;
-    top: 157px;
-    right: 26px;
+    top: 39%;
+    right: 8%;
     animation: pulseOut 2s infinite cubic-bezier(0.36, 0.11, .89, .32);
 
 }
@@ -246,6 +246,11 @@ button:hover {
     height: 35px;
     width: 100px;
     cursor: pointer;
+}
+
+#close-rules img {
+    height: 55%;
+    width: 40%;
 }
 
 #game-rules {
