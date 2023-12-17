@@ -133,7 +133,7 @@ main {
     height: 21%;
     width: 30%;
     margin: 0% 4%;
-    z-index: 1;
+    z-index: 20;
     position: relative;
 }
 
@@ -192,8 +192,9 @@ button:hover {
     border-radius: 50%;
     position: absolute;
     top: 39%;
-    left: 8%;
+    left: 7%;
     display: none;
+    z-index: 10;
     animation: pulseOut 2s infinite cubic-bezier(0.36, 0.11, .89, .32);
 }
 
@@ -205,7 +206,8 @@ button:hover {
     border-radius: 50%;
     position: absolute;
     top: 39%;
-    right: 8%;
+    right: 7%;
+    z-index: 10;
     animation: pulseOut 2s infinite cubic-bezier(0.36, 0.11, .89, .32);
 
 }
@@ -232,6 +234,7 @@ button:hover {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    z-index: 1;
 }
 
 #rules-button {
@@ -261,7 +264,7 @@ button:hover {
     position: absolute;
     bottom: 11%;
     right: 4%;
-    height: 35%;
+    height: 40%;
     width: 65%;
     display: none;
     flex-direction: column;
@@ -274,8 +277,8 @@ button:hover {
 #game-rules #close-rules {
     border: 4px solid white;
     border-radius: 50%;
-    width: 20%;
-    height: 18%;
+    width: 18%;
+    height: 15%;
     position: absolute;
     top: -6%;
     right: -6%;

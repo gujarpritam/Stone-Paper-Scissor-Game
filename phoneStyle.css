@@ -128,6 +128,26 @@ main {
     width: 20%;
     /* Adjusted width for mobile */
     z-index: 100;
+
+    animation: rockPaperScissor 1s infinite;
+}
+
+@keyframes rockPaperScissor {
+    0% {
+        scale: 1;
+        box-shadow: 1px 1px 2px 2px #507733;
+    }
+
+    50% {
+        scale: 1.025;
+        box-shadow: 1.5px 1.5px 3px 3px #507733;
+    }
+
+    100% {
+        scale: 1;
+        box-shadow: 1px 1px 2px 2px #507733;
+
+    }
 }
 
 .stone-scissor-paper:hover {
@@ -137,14 +157,36 @@ main {
 
 img {
     background: none;
-    height: 65%;
-    width: 65%;
+    height: 63%;
+    width: 63%;
 }
 
 #line1,
 #line2,
 #line3 {
-    display: none;
+    border: 8px solid #000000A3;
+    background: #000000A3;
+    height: 0px;
+    width: 25%;
+    position: absolute;
+}
+
+#line1 {
+    top: 23%;
+    left: 43%;
+    rotate: 0deg;
+}
+
+#line2 {
+    top: 44%;
+    left: 24%;
+    rotate: 60deg;
+}
+
+#line3 {
+    top: 44%;
+    left: 47%;
+    rotate: 120deg;
 }
 
 /* -------RULES-------- */
@@ -172,9 +214,9 @@ img {
     position: absolute;
     bottom: 11%;
     right: 4%;
-    height: 53%;
-    width: 80%;
-    /* Adjusted width for mobile */
+    height: 43%;
+    font-size: 80%;
+    width: 66%;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -186,10 +228,10 @@ img {
 #game-rules #close-rules {
     border: 4px solid white;
     border-radius: 50%;
-    width: 17%;
+    width: 16%;
     height: 15%;
     position: absolute;
-    top: -6%;
+    top: -7%;
     right: -6%;
     background: #FF0000;
     cursor: pointer;

@@ -97,9 +97,9 @@ button:hover {
     position: absolute;
     bottom: 11%;
     right: 4%;
-    height: 39%;
+    height: 43%;
     font-size: 80%;
-    width: 75%;
+    width: 70%;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -109,7 +109,7 @@ button:hover {
 #game-rules #close-rules {
     border: 4px solid white;
     border-radius: 50%;
-    width: 17%;
+    width: 18%;
     height: 15%;
     position: absolute;
     top: -6%;

@@ -125,6 +125,25 @@ main {
     height: 75%;
     width: 25%;
     z-index: 100;
+    animation: rockPaperScissor 1s infinite;
+}
+
+@keyframes rockPaperScissor {
+    0% {
+        scale: 1;
+        box-shadow: 1px 1px 2px 2px #507733;
+    }
+
+    50% {
+        scale: 1.025;
+        box-shadow: 2px 2px 4px 4px #507733;
+    }
+
+    100% {
+        scale: 1;
+        box-shadow: 1px 1px 2px 2px #507733;
+
+    }
 }
 
 .stone-scissor-paper:hover {
