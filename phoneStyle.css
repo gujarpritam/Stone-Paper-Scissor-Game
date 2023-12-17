@@ -132,7 +132,7 @@ main {
 
 .stone-scissor-paper:hover {
     cursor: pointer;
-    scale: 1.02;
+    scale: 1.1;
 }
 
 img {
@@ -230,5 +230,5 @@ img {
 
 #rules-button:hover,
 #close-rules:hover {
-    scale: 1.02;
+    scale: 1.1;
 }

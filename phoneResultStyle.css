@@ -182,7 +182,7 @@ img {
 
 button:hover {
     cursor: pointer;
-    scale: 1.02;
+    scale: 1.05;
 }
 
 .circle-left {
@@ -310,7 +310,7 @@ button:hover {
 
 #rules-button:hover,
 #close-rules:hover {
-    scale: 1.02;
+    scale: 1.05;
 }
 
 /* ------------next button------------ */
