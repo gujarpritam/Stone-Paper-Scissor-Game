@@ -15,6 +15,8 @@ input.forEach(element => {
         let arr = [];
         arr[0] = element.id;
         arr[1] = random;
+
+        sessionStorage.setItem('dataSend', JSON.stringify(1));
         sessionStorage.setItem('data', JSON.stringify(arr));
         window.location.href = 'resultIndex.html';
     }

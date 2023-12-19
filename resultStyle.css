@@ -189,8 +189,8 @@ button:hover {
     width: 24%;
     border-radius: 50%;
     position: absolute;
-    top: 83px;
-    left: 31px;
+    top: 24%;
+    left: 4%;
     animation: pulseOut 2s infinite cubic-bezier(0.36, 0.11, .89, .32);
 }
 
@@ -201,8 +201,8 @@ button:hover {
     width: 24%;
     border-radius: 50%;
     position: absolute;
-    top: 83px;
-    right: 31px;
+    top: 24%;
+    right: 4%;
     animation: pulseOut 2s infinite cubic-bezier(0.36, 0.11, .89, .32);
 
 }

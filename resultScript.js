@@ -5,6 +5,9 @@ let yourScore = 1;
 let sessionString = sessionStorage.getItem('data');
 let data = JSON.parse(sessionString);
 
+let sessionDataSend = sessionStorage.getItem('dataSend');
+let dataSend = JSON.parse(sessionDataSend);
+
 // -------your-pick---------
 if (data[0] == "stone") {
     document.querySelector('#your-pick img').src = './images/stone.png';
@@ -82,8 +85,10 @@ else if ((data[0] == "stone" && arr[data[1]] == "scissor") || (data[0] == "sciss
     // --------displaying the score on Score-board when you win--------
     if (localStorage.hasOwnProperty('yourScore')) {
         let retrieveYourScore = JSON.parse(localStorage.getItem('yourScore'));
-        retrieveYourScore++;
-        localStorage.setItem('yourScore', JSON.stringify(retrieveYourScore));
+        if (dataSend == 1) {
+            retrieveYourScore++;
+            localStorage.setItem('yourScore', JSON.stringify(retrieveYourScore));
+        }
         document.querySelector('#your-score div').innerHTML = retrieveYourScore;
     }
     else {
@@ -96,11 +101,14 @@ else if ((data[0] == "stone" && arr[data[1]] == "scissor") || (data[0] == "sciss
     }
 }
 // -------if pc wins-------
-else {
+else if ((data[0] == "stone" && arr[data[1]] == "paper") || (data[0] == "scissor" && arr[data[1]] == "stone") || (data[0] == "paper" && arr[data[1]] == "scissor")) {
     if (localStorage.hasOwnProperty('computerScore')) {
         let retrieveComputerScore = JSON.parse(localStorage.getItem('computerScore'));
-        retrieveComputerScore++;
-        localStorage.setItem('computerScore', JSON.stringify(retrieveComputerScore));
+        if (dataSend == 1) {
+            retrieveComputerScore++;
+            localStorage.setItem('computerScore', JSON.stringify(retrieveComputerScore));
+        }
+
         document.querySelector('#computer-score div').innerHTML = retrieveComputerScore;
     }
     else {
@@ -126,3 +134,5 @@ function closeRules() {
 document.querySelector('#next-button').addEventListener("click", function () {
     window.location.href = 'award.html';
 });
+
+sessionStorage.setItem('dataSend', JSON.stringify(0));
