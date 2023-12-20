@@ -19,7 +19,7 @@ main {
     border: 3px solid white;
     border-radius: 10px;
     width: 50%;
-    height: 20%;
+    height: 21%;
     display: flex;
     justify-content: space-between;
 }
@@ -42,7 +42,7 @@ main {
     color: #FFFFFF;
     /* border: 3px solid white; */
     border-radius: 10px;
-    margin-left: 15px;
+    margin: 4px 0px 0px 10px;
 }
 
 #score {
@@ -57,13 +57,14 @@ main {
 
 #score #computer-score,
 #your-score {
-    height: 90%;
+    height: 86%;
     width: 45%;
     background: white;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 2%;
 }
 
 #computer-score p,
@@ -81,7 +82,7 @@ main {
 
 #computer-score p:nth-child(1),
 #your-score p:nth-child(1) {
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 #computer-score div,
@@ -185,26 +186,25 @@ button:hover {
 .circle-left {
     display: none;
     background-color: #375720;
-    height: 52%;
-    width: 24%;
+    height: 51%;
+    width: 23%;
     border-radius: 50%;
     position: absolute;
-    top: 24%;
-    left: 4%;
+    top: 24.4%;
+    left: 4.4%;
     animation: pulseOut 2s infinite cubic-bezier(0.36, 0.11, .89, .32);
 }
 
 .circle-right {
     display: flex;
     background-color: #375720;
-    height: 52%;
-    width: 24%;
+    height: 51%;
+    width: 23%;
     border-radius: 50%;
     position: absolute;
-    top: 24%;
-    right: 4%;
+    top: 24.4%;
+    right: 4.4%;
     animation: pulseOut 2s infinite cubic-bezier(0.36, 0.11, .89, .32);
-
 }
 
 @keyframes pulseOut {
@@ -253,8 +253,9 @@ button:hover {
     position: absolute;
     bottom: 11%;
     right: 4%;
-    height: 50%;
-    width: 21%;
+    height: 49%;
+    width: 22%;
+    z-index: 1;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -288,8 +289,8 @@ button:hover {
 }
 
 #game-rules ul {
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
     list-style-type: square;
 }
 
