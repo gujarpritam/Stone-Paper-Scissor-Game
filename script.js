@@ -13,7 +13,7 @@ input.forEach(element => {
     element.onclick = function () {
         let random = Math.floor(Math.random() * 3);
         let arr = [];
-        arr[0] = element.id;
+        arr[0] = element.id.toString();
         arr[1] = random;
 
         sessionStorage.setItem('dataSend', JSON.stringify(1));

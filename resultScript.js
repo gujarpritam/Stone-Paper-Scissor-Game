@@ -9,29 +9,29 @@ let sessionDataSend = sessionStorage.getItem('dataSend');
 let dataSend = JSON.parse(sessionDataSend);
 
 // -------your-pick---------
-if (data[0] == "stone") {
+if (data[0] === "stone") {
     document.querySelector('#your-pick img').src = './images/stone.png';
     document.querySelector('#your-pick').style.borderColor = '#0074B6';
 }
-else if (data[0] == "scissor") {
+else if (data[0] === "scissor") {
     document.querySelector('#your-pick img').src = './images/scissor.png';
     document.querySelector('#your-pick').style.borderColor = '#BD00FF';
 }
-else if (data[0] == 'paper') {
+else if (data[0] === "paper") {
     document.querySelector('#your-pick img').src = './images/paper.png';
     document.querySelector('#your-pick').style.borderColor = '#FFA943';
 }
 
 // -------PC pick--------
-if (data[1] == 0) {
+if (data[1] === 0) {
     document.querySelector('#pc-pick img').src = './images/stone.png';
     document.querySelector('#pc-pick').style.borderColor = '#0074B6';
 }
-else if (data[1] == 1) {
+else if (data[1] === 1) {
     document.querySelector('#pc-pick img').src = './images/scissor.png';
     document.querySelector('#pc-pick').style.borderColor = '#BD00FF';
 }
-else if (data[1] == 2) {
+else if (data[1] === 2) {
     document.querySelector('#pc-pick img').src = './images/paper.png';
     document.querySelector('#pc-pick').style.borderColor = '#FFA943';
 }
@@ -48,7 +48,7 @@ arr[1] = "scissor";
 arr[2] = "paper";
 
 // -----------if there is a tie----------
-if (data[0] == arr[data[1]]) {
+if (data[0] === arr[data[1]]) {
     document.querySelector('#result-Text p:nth-child(1)').innerHTML = 'TIE UP';
     document.querySelector('#result-Text p:nth-child(2)').innerHTML = '';
     document.querySelector('#result-Text #play-again').innerHTML = 'REPLAY';
@@ -68,7 +68,7 @@ if (data[0] == arr[data[1]]) {
     }
 }
 // --------if you win-----------
-else if ((data[0] == "stone" && arr[data[1]] == "scissor") || (data[0] == "scissor" && arr[data[1]] == "paper") || (data[0] == "paper" && arr[data[1]] == "stone")) {
+else if ((data[0] === "stone" && arr[data[1]] === "scissor") || (data[0] === "scissor" && arr[data[1]] === "paper") || (data[0] === "paper" && arr[data[1]] === "stone")) {
     document.querySelector('#result-Text p:nth-child(1)').innerHTML = 'YOU WON';
     const circleRight = Array.from(document.getElementsByClassName('circle-right'));
     circleRight.forEach(element => {
@@ -85,7 +85,7 @@ else if ((data[0] == "stone" && arr[data[1]] == "scissor") || (data[0] == "sciss
     // --------displaying the score on Score-board when you win--------
     if (localStorage.hasOwnProperty('yourScore')) {
         let retrieveYourScore = JSON.parse(localStorage.getItem('yourScore'));
-        if (dataSend == 1) {
+        if (dataSend === 1) {
             retrieveYourScore++;
             localStorage.setItem('yourScore', JSON.stringify(retrieveYourScore));
         }
@@ -101,10 +101,10 @@ else if ((data[0] == "stone" && arr[data[1]] == "scissor") || (data[0] == "sciss
     }
 }
 // -------if pc wins-------
-else if ((data[0] == "stone" && arr[data[1]] == "paper") || (data[0] == "scissor" && arr[data[1]] == "stone") || (data[0] == "paper" && arr[data[1]] == "scissor")) {
+else if ((data[0] === "stone" && arr[data[1]] === "paper") || (data[0] === "scissor" && arr[data[1]] === "stone") || (data[0] === "paper" && arr[data[1]] === "scissor")) {
     if (localStorage.hasOwnProperty('computerScore')) {
         let retrieveComputerScore = JSON.parse(localStorage.getItem('computerScore'));
-        if (dataSend == 1) {
+        if (dataSend === 1) {
             retrieveComputerScore++;
             localStorage.setItem('computerScore', JSON.stringify(retrieveComputerScore));
         }
