@@ -1,4 +1,4 @@
-let arr = []
+let arr = [];
 let computerScore = 1;
 let yourScore = 1;
 
@@ -39,7 +39,7 @@ else if (data[1] === 2) {
 // --------play again trigger---------
 document.querySelector('#play-again').addEventListener("click", function () {
     window.location.href = 'index.html';
-})
+});
 
 
 // ------------Won, Lost or Tie--------
